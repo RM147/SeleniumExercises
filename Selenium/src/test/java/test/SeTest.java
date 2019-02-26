@@ -56,6 +56,7 @@ public class SeTest {
 		assertEquals("Nope", "**Successful Login**", text.getText());
 
 	}
+
 	@Ignore
 	@Test
 	public void task2Test() {
@@ -66,10 +67,28 @@ public class SeTest {
 		WebElement button = driver.findElement(By.xpath("//*[@id=\"searchbox\"]/button"));
 		button.submit();
 		WebElement dresscheck = driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/h5/a"));
+
+		assertEquals("Nope", "Printed Summer Dress", dresscheck.getText());
+
+	}
+
+	@Test
+	public void task3Test() {
+		driver.manage().window().maximize();
+		driver.get("https://www.phptravels.net/hotels/search/united-kingdom/london/26-02-2019/28-02-2019/2/0");
+				
+		WebElement text = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[5]/div/div[3]/div[1]/div/table/tbody/tr[1]/td/div[2]/div/a"));
+		assertEquals("Delhi",text.getAttribute("title"));
 		
-		assertEquals("Nope", "Printed Summer Dress",dresscheck.getText());
-		
-		
+		//*[@id="ls-row-OCDO-L"]
+		//*[@id="ls-row-TW.-L"]
+		//*[@id="view-constituents"]/div[2]/table/tbody
+	}
+	
+	@Test
+	public void task4Test() {
+		driver.manage().window().maximize();
+		driver.get("https://www.hl.co.uk/shares/stock-market-summary/ftse-100/risers");
 		
 		
 	}
