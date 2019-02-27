@@ -15,7 +15,7 @@ public class StocksRisers {
 	private List<WebElement> items;
 	
 	public String answer() {
-		return items.get(1).getText()+" "+items.get(4);
+		return items.get(1).getText()+" "+items.get(4).getText();
 	}
 	
 
