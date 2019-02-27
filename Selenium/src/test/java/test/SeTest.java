@@ -76,21 +76,18 @@ public class SeTest {
 	public void task3Test() {
 		driver.manage().window().maximize();
 		driver.get("https://www.phptravels.net/hotels/search/united-kingdom/london/26-02-2019/28-02-2019/2/0");
-				
-		WebElement text = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[5]/div/div[3]/div[1]/div/table/tbody/tr[1]/td/div[2]/div/a"));
-		assertEquals("Delhi",text.getAttribute("title"));
-		
-		//*[@id="ls-row-OCDO-L"]
-		//*[@id="ls-row-TW.-L"]
-		//*[@id="view-constituents"]/div[2]/table/tbody
+
+		WebElement text = driver.findElement(
+				By.xpath("//*[@id=\"body-section\"]/div[5]/div/div[3]/div[1]/div/table/tbody/tr[1]/td/div[2]/div/a"));
+		assertEquals("Delhi", text.getAttribute("title"));
+
 	}
-	
+
 	@Test
 	public void task4Test() {
 		driver.manage().window().maximize();
 		driver.get("https://www.hl.co.uk/shares/stock-market-summary/ftse-100/risers");
-		
-		
+
 	}
 
 }
