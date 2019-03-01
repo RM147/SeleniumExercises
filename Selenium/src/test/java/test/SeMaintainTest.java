@@ -53,7 +53,7 @@ public class SeMaintainTest {
 	}
 	
 	@Test
-	public void MaintainTest() {
+	public void StockTest() {
 		driver.manage().window().maximize();
 		driver.get("https://www.hl.co.uk/shares/stock-market-summary/ftse-100/risers");
 		StocksRisers stock = PageFactory.initElements(driver, StocksRisers.class);
